@@ -8,7 +8,7 @@ class Book:
     def __str__(self):
         result = f"{self.__class__.__name__}: {self.title} by {self.author}"
         if isinstance(self, EBook):
-            result += f", File Size: {self.file_size} KB"
+            result += f", File Size: {self.file_size}KB"
         elif isinstance(self, PrintBook):
             result += f", Page Count: {self.page_count}"
         return result
