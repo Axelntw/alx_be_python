@@ -16,7 +16,7 @@ class Book:
     def __repr__(self):
         result = f"{self.__class__.__name__}: {self.title} by {self.author}"
         if isinstance(self, EBook):
-            result += f", File Size: {self.file_size} KB"
+            result += f", File Size: {self.file_size}KB"
         elif isinstance(self, PrintBook):
             result += f", Page Count: {self.page_count}"
         return result
@@ -39,5 +39,4 @@ class Library:
         self.books.append(book)
 
     def list_books(self):
-        for book in self.books:
-            print(book)
+        [print(book) for book in self.books]
